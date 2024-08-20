@@ -1,0 +1,27 @@
+.training__content{
+    background-color: #1B1B1B;
+    padding-top: 65px;
+    padding-left: 65px;
+    padding-bottom: 65px;
+    border-radius: 50px;
+}
+
+.training__title ,.training__description ,.training__text{
+    color: #F6F6F6;
+}
+
+@media screen and (max-width:1400px) {
+   .training .container{
+        display: block;
+   }
+
+   .training__image{
+    width: 100%;
+   }
+}
+
+@media screen and (max-width:736px) {
+    .training__content{
+        padding-left: 20px;
+    }
+}

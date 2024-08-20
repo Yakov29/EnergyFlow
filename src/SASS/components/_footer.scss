@@ -1,0 +1,113 @@
+.footer .container{
+    background-image: url("../images/Rectangle\ 42209.png");
+    background-repeat: no-repeat;
+    height: 454px;
+    padding-left: 48px;
+    padding-top: 66px;
+    position: relative;
+}
+
+.footer__box{
+    display: block;
+}
+
+.footer__logo{
+    font-size: 28px;
+    color: #ffff;
+}
+
+.footer__links{
+    display: flex;
+    gap: 12px;
+}
+
+.footer__title{
+    margin-left: 150px;
+    font-size: 64px;
+    color: white;
+    width: 488px;
+}
+
+.footer__title__span{
+    color: #f6f6f675;
+}
+
+.footer__subscribe{
+    margin-left: 160px;
+    text-align: center;
+    display: block;
+}
+
+.subscribe__text{
+    color: #F6F6F6;
+}
+
+.subscribe__input{
+    background: none;
+    border: 1px solid #fff;
+    border-radius: 30px;
+    width: 352px;
+    height: 48px;
+    margin-top: 20px;
+}
+
+.subscribe__button{
+    width: 352px;
+    background-color: #7E847F;
+    color: #F6F6F6;
+    height: 48px;
+    margin-top: 20px;
+}
+
+.footer__copyright{
+
+    text-align: center;
+}
+
+.footer__content{
+    display: flex;
+}
+
+@media screen and (max-width:1400px) {
+
+    .footer .container{
+        padding-top: 14px;
+    }
+    .footer__content{
+        display: block;
+    }
+
+.footer__title{
+    margin-left: 100px;
+}
+
+    .footer__subscribe{
+        margin-left: 0;
+    }
+ }
+ 
+ @media screen and (max-width:736px) {
+   .footer .container{
+    display: block;
+    padding-left: 20px;
+   }
+
+   .footer__links{
+    margin-top: 10px;
+    margin-bottom: 40px;
+   }
+
+   .footer__title{
+    margin: 0;
+    font-size: 32;
+    width: 100%;
+   }
+
+   .subscribe__input{
+    width: 90%;
+   }
+
+   .subscribe__button{
+    width: 90%;
+   }
+ }

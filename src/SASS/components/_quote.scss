@@ -1,0 +1,40 @@
+.quote__box{
+    background-color: #7E847F;
+    border-radius: 50px;
+    padding-left: 64px;
+    padding-top: 64px;
+    padding-bottom: 64px;
+}
+
+.quote__title{
+    color: white;
+}
+
+.quote__description{
+    color: #F6F6F6;
+}
+
+.quote__author{
+    color: #F6F6F6;
+    margin-top: 30px;
+}
+
+@media screen and (max-width:1400px) {
+    .quote .container{
+        display: block;
+    }
+
+    .quote__image{
+        width: 100%;
+    }
+}
+
+@media screen and (max-width:736px) {
+    .quote__image{
+        height: 273px;
+    }
+
+    .quote__box{
+        padding-left: 20px;
+    }
+}

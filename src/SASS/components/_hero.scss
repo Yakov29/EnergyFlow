@@ -1,0 +1,52 @@
+.hero__title{
+    font-size: 120;
+    margin: 0;
+}
+
+.hero__box{
+    margin-left: 32px;
+    margin-top: 119px;
+}
+
+.hero__title__span{
+    font-style: italic;
+    color: #7E847F;
+}
+
+.hero__description{
+    margin-top: 26px;
+}
+
+@media screen and (max-width:1400px) {
+    .hero__image{
+        width: 248px;
+    }
+
+    .hero__title{
+        font-size: 98;
+        margin: 0;
+    }
+}
+
+@media screen and (max-width:736px) {
+    .hero .container{
+        display: block;
+    }
+
+    .hero__image{
+        width: 100%;
+    }
+
+    .hero__title{
+        font-size: 56;
+        text-align: center;
+    }
+
+    .hero__description{
+        text-align: center;
+    }
+
+    .hero__box{
+        margin: 0;
+    }
+}
