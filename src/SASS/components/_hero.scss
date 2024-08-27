@@ -18,21 +18,14 @@
 }
 
 @media screen and (max-width:1400px) {
-    .hero__image{
-        width: 248px;
-    }
-
     .hero__title{
-        font-size: 98;
+        font-size: 98px;
         margin: 0;
     }
-}
 
-@media screen and (max-width:736px) {
     .hero .container{
         display: block;
     }
-
     .hero__image{
         width: 100%;
     }
