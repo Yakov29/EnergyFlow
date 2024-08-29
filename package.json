@@ -6,8 +6,8 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "parcel src/index.html",
-    "build": "parcel build src/*.html --public-url /energyflow/",
-     "deploy": "gh-pages -d dist",
+    "build": "parcel build src/*.html --public-url /EnergyFlow",
+    "deploy": "gh-pages -d dist",
     "predeploy": "npm run build"
   },
   "keywords": [],
