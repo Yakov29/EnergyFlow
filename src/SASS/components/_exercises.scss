@@ -1,67 +1,99 @@
-.exercises .container{
+.exercises .container {
     background-color: #E8E8E8;
-    padding-left: 48px;
     padding-top: 64px;
-    display: block;
     padding-bottom: 20px;
+    display: block;
 }
 
-.exercises__title{
-    font-size: 44px;
-}
-
-.exercises__genre{
-    margin-top: 32px;
-}
-
-.genre__button{
-    padding-left: 20px;
-    padding-right: 20px;
-    padding-top: 10px;
-    padding-bottom: 10px;
-    background-color: #F6F6F6;
-}
-
-.exercises__List{
-    display: flex;
-}
-
-.exercises__item{
-    background-color: gray;
-    width: 313px;
-    height: 250px;
-    align-items: center;
-    display: flex;
+.exercises__title {
     text-align: center;
+    font-size: 32px;
+    margin-bottom: 30px;
+    color: #333;
 }
 
-.exercises__box{
-    margin-left: auto;
-    margin-right: auto;
+.exercises__List {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 20px;
+    padding: 0;
+    list-style: none;
 }
 
-.exercises__pages{
-    justify-content: center;
-    width: 100%;
-    gap: 10px;
+.exercises__item {
+    position: relative;
+    overflow: hidden;
+    border-radius: 8px;
+    background-size: cover;
+    background-position: center;
+    height: 200px;
+    transition: transform 0.3s ease-in-out;
+}
+
+.exercises__item:hover {
+    transform: scale(1.05);
+}
+
+.exercises__box {
+    position: relative;
+    z-index: 2;
+    padding: 10px;
+    color: white;
+    background: rgba(0, 0, 0, 0.5);
+    border-radius: 8px;
     display: flex;
-    margin-left: auto;
-    margin-right: auto;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
 }
 
-.exercises__button{
-    padding: 15px;
-    border-radius: 100px;
-    background-color: none;
-    border:1px solid gray;
+.exercises__item__title {
+    margin: 0;
+    font-size: 18px;
+    font-weight: bold;
+    text-align: center;
+    color: white;
 }
 
-@media screen and (max-width:1400px) {
-   
+.exercises__item::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    background-position: center;
+    z-index: 1;
+    background-color: rgba(0, 0, 0, 0.5);
+    filter: brightness(0.7);
 }
 
-@media screen and (max-width:736px) {
-        .exercises .container{
-            padding-left: 20px;
-        }
+@media screen and (max-width: 1400px) {
+    .exercises__List {
+        grid-template-columns: repeat(4, 1fr);
+    }
+    .exercises .container{
+       
+    }
+}
+
+@media screen and (max-width: 736px) {
+    .exercises__List {
+        grid-template-columns: repeat(2, 1fr);
+        
+    }
+
+    .exercises__title {
+        font-size: 24px;
+        margin-bottom: 20px;
+    }
+
+    .exercises__box {
+        padding: 8px;
+    }
+
+    .exercises__item__title {
+        font-size: 16px;
+    }
 }
