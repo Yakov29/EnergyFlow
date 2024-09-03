@@ -1,5 +1,88 @@
+.exercises__backdrop{
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #1B1B1B99;
+    z-index: 1;
+}
+
+.exercises__modal{
+    width: 732px;
+    background-color: #F6F6F6;
+    display: flex;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 100px;
+    padding: 40px;
+    position: relative;
+    border-radius: 40px;
+}
+
+.modal__gif{
+    background-color: #1B1B1B33;
+    width:250px;
+    height: 250px;
+    border-radius: 12px;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.exercises__content{
+    width: 60%;
+}
+
+.exercises__close{
+position: absolute;
+right: 0;
+width: 60px;
+height: 60px;
+font-size: 30;
+top: 0;
+background: none;
+}
+
+.exercises__content{
+    margin-left: 40px;
+}
+
+.modal__data{
+    display: flex;
+    gap: 16px;
+    padding-top: 8px;
+    border-top: 1px solid #8d8d8d;
+}
+
+.data__title{
+    color: #8d8d8d;
+}
+
+.modal__callories{
+    margin-top: 16px;
+    padding-bottom: 8px;
+    border-bottom: 1px solid #8d8d8d;
+}
+
+.callories__title{
+    color: #8d8d8d;
+}
+
+.modal__description{
+    color: #8d8d8d;
+}
+
+.add__favorites{
+    background-color: #7E847F;
+    color: #F6F6F6;
+}
+
+.give__raiting{
+    background: none;
+    border: 1px solid #333;
+}
+
 .exercises .container {
-    background-color: #E8E8E8;
     padding-top: 64px;
     padding-bottom: 20px;
     display: block;
@@ -27,6 +110,7 @@
     background-size: cover;
     background-position: center;
     height: 200px;
+    z-index: 1;
     transition: transform 0.3s ease-in-out;
 }
 
@@ -73,15 +157,43 @@
     .exercises__List {
         grid-template-columns: repeat(4, 1fr);
     }
-    .exercises .container{
-       
+    .exercises__modal{
+        width: 80%;
     }
 }
 
 @media screen and (max-width: 736px) {
+    .modal__data{
+        flex-wrap: wrap;
+    }
+    .modal__gif{
+       width: 100%;
+    }
     .exercises__List {
         grid-template-columns: repeat(2, 1fr);
         
+    }
+
+    .exercises__modal{
+        display: block;
+        text-align: center;
+        width: 90%;
+        height: 100%;
+        margin-top: 30px;
+        padding:20px;
+    }
+
+    .modal__description{
+        display: none;
+    }
+
+    .modal__callories{
+        margin-bottom: 10px;
+    }
+
+    .exercises__content{
+        width: 100%;
+        margin: 0;
     }
 
     .exercises__title {
