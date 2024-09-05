@@ -3,7 +3,6 @@ import axios from 'axios';
 const exerciseBackdrop = document.querySelector('.exercises__backdrop');
 const exerciseClose = document.querySelector('.exercises__close');
 
-// Fetch exercises from API
 const getExercises = async () => {
   try {
     const axiosResponse = await axios.get(
@@ -31,7 +30,6 @@ const getExercises = async () => {
       listItem.appendChild(boxDiv);
       exercisesList.appendChild(listItem);
 
-      // Open modal with exercise details
       listItem.addEventListener('click', () => {
         exerciseBackdrop.classList.remove('change__invisible');
         const modalTitle = document.querySelector('.modal__title');
@@ -64,7 +62,6 @@ const getExercises = async () => {
         dataGif.style.backgroundImage = `url(${gifUrl})`;
         dataCallories.textContent = `${callories}/${time} min`;
 
-        // Add to favorites when the button is clicked
         favoritesButton.addEventListener("click", () => {
           addToFavorites({
             _id,
@@ -80,7 +77,6 @@ const getExercises = async () => {
         });
       });
 
-      // Close modal when the close button is clicked
       exerciseClose.addEventListener('click', () => {
         exerciseBackdrop.classList.add('change__invisible');
       });
@@ -90,11 +86,9 @@ const getExercises = async () => {
   }
 };
 
-// Add exercise to local storage
 const addToFavorites = (exercise) => {
   let favorites = JSON.parse(localStorage.getItem('favorites')) || [];
   
-  // Check if the exercise is already in favorites
   if (!favorites.find(fav => fav._id === exercise._id)) {
     favorites.push(exercise);
     localStorage.setItem('favorites', JSON.stringify(favorites));
