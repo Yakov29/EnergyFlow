@@ -8,6 +8,12 @@
     z-index: 1;
 }
 
+.exercises__genre{
+    display: flex;
+    gap: 20px;
+    margin-bottom: 50px;
+}
+
 .exercises__modal{
     width: 732px;
     background-color: #F6F6F6;
@@ -31,6 +37,9 @@
 
 .exercises__content{
     width: 60%;
+}
+.genre__button{
+    background-color: white;
 }
 
 .exercises__close{

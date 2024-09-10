@@ -17,7 +17,7 @@ function createFavoriteItem(favorite) {
 
     const title = document.createElement('h5');
     title.classList.add('card__title');
-    title.textContent = 'Exercise';
+    title.textContent = `${favorite.name}`;
     card.appendChild(title);
 
     const dataList = document.createElement('ul');
