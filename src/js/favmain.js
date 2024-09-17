@@ -1,4 +1,6 @@
 const favoritesList = document.querySelector(".favorites__list");
+const noFavoritesMessage = document.querySelector(".favorites__none");
+console.log(noFavoritesMessage)
 
 const favorites = JSON.parse(localStorage.getItem('favorites')) || [];
 
@@ -64,10 +66,10 @@ function createFavoriteItem(favorite) {
     favoritesList.appendChild(listItem);
 }
 
-const noFavoritesMessage = document.querySelector(".favorites__none");
-if (favorites.length === 0) {
-    noFavoritesMessage.style.display = 'flex';
-} else {
-    noFavoritesMessage.style.display = 'none';
-    favorites.forEach(createFavoriteItem);
-}
+
+// if (favorites.length === 0) {
+//     noFavoritesMessage.style.display = 'flex';
+// } else {
+//     noFavoritesMessage.style.display = 'none';
+//     favorites.forEach(createFavoriteItem);
+// }
