@@ -109,8 +109,9 @@
     display: flex;
     justify-content: center;
     align-items: center;
-width: 100px;
-height: 36px;
+    width: 150px;
+height: 35px;
+padding: 0;
 margin-top: 20px;
 border-radius: 20px;
 }
@@ -121,8 +122,10 @@ border-radius: 20px;
 
 .mobile__links{
     display: flex;
-    justify-content: center;
-margin-top: 100px;
+    bottom: 20px;
+width: 95%;
+justify-content: center;
+position: absolute;
     gap: 12px;
 }
 

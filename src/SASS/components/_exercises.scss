@@ -13,6 +13,7 @@
     border-radius: 10px;
     width: 313px;
     padding: 10px;
+    position: relative;
 }
 
 
@@ -21,6 +22,8 @@
     display: flex;
     gap: 20px;
     margin-bottom: 50px;
+   
+ 
 }
 
 .exercises__modal{
@@ -115,10 +118,11 @@ background: none;
 
 .exercises__List {
     display: grid;
-    grid-template-columns: repeat(5, 1fr);
+    grid-template-columns: repeat(4, 1fr);
     gap: 20px;
     padding: 0;
     list-style: none;
+
 }
 
 .exercises__item {
@@ -172,8 +176,11 @@ background: none;
 }
 
 @media screen and (max-width: 1400px) {
+    .exercises__genre{
+        justify-content: center;
+    }
     .exercises__List {
-        grid-template-columns: repeat(4, 1fr);
+        grid-template-columns: repeat(3, 1fr);
     }
     .exercises__modal{
         width: 80%;
@@ -188,7 +195,7 @@ background: none;
        width: 100%;
     }
     .exercises__List {
-        grid-template-columns: repeat(2, 1fr);
+        grid-template-columns: repeat(1, 1fr);
         
     }
 

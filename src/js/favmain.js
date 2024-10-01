@@ -1,6 +1,4 @@
 const favoritesList = document.querySelector(".favorites__list");
-const noFavoritesMessage = document.querySelector(".favorites__none");
-console.log(noFavoritesMessage)
 
 const favorites = JSON.parse(localStorage.getItem('favorites')) || [];
 
@@ -13,13 +11,12 @@ function createFavoriteItem(favorite) {
 
     const gif = document.createElement('img');
     gif.classList.add('card__gif');
-    gif.src = favorite.gifUrl;
-    gif.alt = favorite.description;
+    gif.src = favorite.modalGif;
     card.appendChild(gif);
 
     const title = document.createElement('h5');
     title.classList.add('card__title');
-    title.textContent = `${favorite.name}`;
+    title.textContent = `${favorite.modalTitle}`;
     card.appendChild(title);
 
     const dataList = document.createElement('ul');
@@ -35,7 +32,7 @@ function createFavoriteItem(favorite) {
 
     const caloriesText = document.createElement('p');
     caloriesText.classList.add('data__text');
-    caloriesText.innerHTML = `Burned calories: <span class="data__insert">${favorite.callories} / ${favorite.time} min</span>`;
+    caloriesText.innerHTML = `Burned calories: <span class="data__insert">${favorite.modalCallories} / ${favorite.modalTime} min</span>`;
     caloriesItem.appendChild(caloriesText);
     dataList.appendChild(caloriesItem);
 
@@ -45,7 +42,7 @@ function createFavoriteItem(favorite) {
 
     const bodyPartText = document.createElement('p');
     bodyPartText.classList.add('data__text');
-    bodyPartText.innerHTML = `Body part: <span class="data__insert">${favorite.bodyPart}</span>`;
+    bodyPartText.innerHTML = `Body part: <span class="data__insert">${favorite.modalPart}</span>`;
     bodyPartItem.appendChild(bodyPartText);
     dataList.appendChild(bodyPartItem);
 
@@ -55,7 +52,7 @@ function createFavoriteItem(favorite) {
 
     const targetText = document.createElement('p');
     targetText.classList.add('data__text');
-    targetText.innerHTML = `Target: <span class="data__insert">${favorite.target}</span>`;
+    targetText.innerHTML = `Target: <span class="data__insert">${favorite.modalTarget}</span>`;
     targetItem.appendChild(targetText);
     dataList.appendChild(targetItem);
 
@@ -66,7 +63,7 @@ function createFavoriteItem(favorite) {
     favoritesList.appendChild(listItem);
 }
 
-
+createFavoriteItem(favorites)
 // if (favorites.length === 0) {
 //     noFavoritesMessage.style.display = 'flex';
 // } else {
