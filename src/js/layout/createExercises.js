@@ -59,29 +59,38 @@ export const createExercisesList = (exerciseResults) => {
       modalGif.style.backgroundImage = `url(${exobject.gifURL})`;
 
       const favorite = {
-        modalTitle:  exobject.bodyPart,
-      modalRaiting:  exobject.rating,
-      modalTarget:  exobject.target,
-      modalPart:  exobject.bodyPart,
-      modalEquipment:  exobject.equipment,
-      modalPopular:  exobject.rating,
-      modalCallories:  exobject.callories,
-      modalTime:exobject.time,
-      modalDescription:  exobject.description,    
-      modalGif:  exobject.gifURL,
+        modalTitle: exobject.bodyPart,
+        modalRaiting: exobject.rating,
+        modalTarget: exobject.target,
+        modalPart: exobject.bodyPart,
+        modalEquipment: exobject.equipment,
+        modalPopular: exobject.rating,
+        modalCallories: exobject.callories,
+        modalTime: exobject.time,
+        modalDescription: exobject.description,    
+        modalGif: exobject.gifURL,
       }
 
 
       const addToFavorites = document.querySelector(".add__favorites")
 
-    addToFavorites.addEventListener("click", () => {
-      localStorage.setItem ("favorites", JSON.stringify(favorite))
-      alert("seted")
-    })
+      addToFavorites.addEventListener("click", () => {
+        let favorites = JSON.parse(localStorage.getItem("favorites")) || [];
+        
+        const isExist = favorites.some(item => item.modalTitle === favorite.modalTitle);
+        
+        if (!isExist) {
 
+          favorites.push(favorite);
+          
+          localStorage.setItem("favorites", JSON.stringify(favorites));
+          
+          alert("Упражнение добавлено в избранное!");
+        } else {
+          alert("Это упражнение уже в избранном!");
+        }
+      });
     });
-
-
 
     exerciseClose.addEventListener('click', e => {
       exerciseBackdrop.classList.add('change__invisible');

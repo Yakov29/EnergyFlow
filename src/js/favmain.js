@@ -1,5 +1,4 @@
 const favoritesList = document.querySelector(".favorites__list");
-
 const favorites = JSON.parse(localStorage.getItem('favorites')) || [];
 
 function createFavoriteItem(favorite) {
@@ -60,13 +59,19 @@ function createFavoriteItem(favorite) {
 
     listItem.appendChild(card);
 
-    favoritesList.appendChild(listItem);
+    return listItem;
 }
 
-createFavoriteItem(favorites)
-// if (favorites.length === 0) {
-//     noFavoritesMessage.style.display = 'flex';
-// } else {
-//     noFavoritesMessage.style.display = 'none';
-//     favorites.forEach(createFavoriteItem);
-// }
+function displayFavorites() {
+    if (favorites.length === 0) {
+        favoritesList.innerHTML = `<p class="favorites__none">It appears that you haven't added any exercises to your favorites yet. To get started, you can add exercises that you like to your favorites for easier access in the future.</p>`;
+    } else {
+        favoritesList.innerHTML = "";
+        favorites.forEach(favorite => {
+            const favoriteItem = createFavoriteItem(favorite);
+            favoritesList.appendChild(favoriteItem);
+        });
+    }
+}
+
+displayFavorites();

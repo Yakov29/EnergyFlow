@@ -1,5 +1,5 @@
-import "./js/headerMobile.js"
-import "./js/footer.js"
+import "./js/burger.js"
+// import "./js/footer.js"
 // Favorites page
 // Exercises
 import "./js/api/cardsFilter.js"

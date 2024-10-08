@@ -1,161 +1,170 @@
-.footer .container{
+.footer .container {
     background-image: url("../images/Rectangle\ 42209.png");
     background-repeat: no-repeat;
-    height: 454px;
-    padding-left: 48px;
-    padding-top: 66px;
+    background-size: cover;
+    padding: 66px 20px;
+    padding-right: 0;
     position: relative;
+    overflow: hidden;
 }
 
-.footer__backdrop{
+.footer__backdrop {
     position: fixed;
     top: 0;
     left: 0;
     right: 0;
     bottom: 0;
     background-color: rgba(66, 66, 66, 0.7);
-    z-index: 1;
+    z-index: 1000;
 }
 
-.footer__modal{
-    position: relative;
-    width: 600px;
-    height: 400px;
+.footer__modal {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 90%;
+    max-width: 600px;
+    height: auto;
+    max-height: 90vh;
     border-radius: 10px;
     background-color: #F6F6F6;
-    margin-left: auto;
-    margin-right: auto;
-    margin-top: 100px;
+    padding: 20px;
     display: flex; 
     justify-content: center; 
     align-items: center;
-   
+    z-index: 1001;
 }
 
-.footer__close{
+.footer__close {
     background: none;
+    border: none;
     position: absolute;
     top: 10px;  
     right: 10px;
-    width: 50px;
-    height: 50px;
-    font-size: 30px;
+    width: 30px;
+    height: 30px;
+    font-size: 24px;
+    cursor: pointer;
 }
 
-.footer__thank{
+.footer__thank {
     display: block;
     text-align: center;
 }
 
-.footer__box{
-    display: block;
-}
-
-.footer__logo{
+.footer__logo {
     font-size: 28px;
-    color: #ffff;
+    color: #fff;
 }
 
-.footer__links{
+.footer__links {
     display: flex;
     gap: 12px;
+    flex-wrap: wrap;
 }
 
-.footer__title{
-    margin-left: 150px;
+.footer__title {
     font-size: 64px;
     color: white;
-    width: 488px;
+    max-width: 488px;
+    margin: 0px 150px;
 }
 
-.footer__title__span{
+.footer__title__span {
     color: #f6f6f675;
 }
 
-.footer__subscribe{
-    margin-left: 160px;
-    text-align: center;
-    display: block;
-    justify-content: center;
-    
+.footer__subscribe {
+    max-width: 352px;
+    width: 100%;
 }
 
-.subscribe__text{
+.subscribe__text {
     color: #F6F6F6;
 }
 
-.subscribe__input{
+.subscribe__input {
     background: none;
     border: 1px solid #fff;
     border-radius: 30px;
-    width: 352px;
     height: 48px;
     margin-top: 20px;
+    width: 100%;
+    padding: 0 15px;
+    color: #fff;
 }
 
-.subscribe__button{
-    width: 352px;
+.subscribe__button {
     background-color: #7E847F;
     color: #F6F6F6;
     height: 48px;
     margin-top: 20px;
+    width: 100%;
+    border: none;
+    border-radius: 30px;
+    cursor: pointer;
 }
 
-.footer__copyright{
-
+.footer__copyright {
     text-align: center;
+    margin-top: 20px;
+    color: #F6F6F6;
 }
 
-.footer__content{
+.footer__content {
     display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    flex-wrap: wrap;
 }
 
-@media screen and (max-width:1400px) {
-
-    .footer .container{
-        padding-top: 14px;
+@media screen and (max-width: 1400px) {
+    .footer .container {
+        padding-top: 40px;
         border-radius: 50px;
     }
-    .footer__content{
-        display: block;
-        margin-left: auto;
+    
+    .footer__content {
+        flex-direction: column;
+        align-items: center;
     }
-    .footer__title{
+    
+    .footer__title {
         font-size: 32px;
-        margin-left: 0;
+        text-align: center;
+        margin: 20px 100px;
     }
 
-    .footer__subscribe{
+    .footer__subscribe {
         margin-top: 30px;
-        margin-left: 0;
-        display: block;
-        width: 350px;
+        margin-left: 0px;
     }
-
- }
+}
  
- @media screen and (max-width:736px) {
-
-   
-    .footer__modal{
-        width: 100%;
-        height: 100%;
+@media screen and (max-width: 736px) {
+    .footer__modal {
+        width: 95%;
+        height: auto;
     }
-   .footer .container{
-    display: block;
-    padding-left: 20px;
-   }
+    
+    .footer .container {
+        // padding: 20px;
+        display: block;
+        text-align: center;
+    }
 
-   .footer__links{
-    margin-top: 10px;
-    margin-bottom: 40px;
-   }
+    .footer__links {
+        margin-top: 10px;
+        margin-bottom: 20px;
+        justify-content: center;
+    }
 
-   .footer__title{
-    width: 100%;
-    margin: 0;
-    font-size: 30;
-   }
+    .footer__title {
+        font-size: 24px;
+    }
 
-
- }
+    .footer__subscribe {
+        width: 100%;
+    }
+}
