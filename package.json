@@ -7,7 +7,7 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "parcel src/index.html",
     "db": "npx json-server db.json",
-    "build": "parcel build src/*.html --public-url /EnergyFlow",
+    "build": "parcel build src/index.html --public-url /EnergyFlow",
     "deploy": "gh-pages -d dist",
     "predeploy": "npm run build"
   },

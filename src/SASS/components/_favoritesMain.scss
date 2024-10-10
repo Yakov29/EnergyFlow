@@ -120,3 +120,13 @@
         flex: 1 1 100%;
     }
 }
+
+.card__button {
+    background-image: url(../svg/trash.svg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    border-radius: 0;
+    width: 25px;
+    height: 30px;
+    padding: 0;
+}

@@ -1,5 +1,5 @@
 const exercisesList = document.querySelector('.exercises__List');
-
+const card__button = document.querySelector('.card__button');
 export const createExercisesList = (exerciseResults) => {
   exercisesList.innerHTML = '';
   console.log(exerciseResults.gifURL)
@@ -97,3 +97,4 @@ export const createExercisesList = (exerciseResults) => {
     });
   });
 };
+

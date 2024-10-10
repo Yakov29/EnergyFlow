@@ -8,10 +8,15 @@ function createFavoriteItem(favorite) {
     const card = document.createElement('div');
     card.classList.add('card__name');
 
-    const gif = document.createElement('img');
-    gif.classList.add('card__gif');
-    gif.src = favorite.modalGif;
-    card.appendChild(gif);
+    // const deleteItem = document.createElement('button');
+    // deleteItem.classList.add('card__delete');
+    // deleteItem.textContent = 'Delete';
+    // card.appendChild(deleteItem);
+
+    const button = document.createElement('button');
+    button.classList.add('card__button');
+    button.type = 'button';
+    card.appendChild(button);
 
     const title = document.createElement('h5');
     title.classList.add('card__title');
@@ -59,7 +64,15 @@ function createFavoriteItem(favorite) {
 
     listItem.appendChild(card);
 
+
+    button.addEventListener('click', (e) => {
+        console.log(e.target)
+        // localStorage.removeItem()
+    })
+
     return listItem;
+
+    
 }
 
 function displayFavorites() {

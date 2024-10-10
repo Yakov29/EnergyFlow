@@ -147,9 +147,16 @@
         width: 95%;
         height: auto;
     }
+
+    .footer__content{
+        width: 100%;
+    }
     
+ 
+
     .footer .container {
-        // padding: 20px;
+        padding-top: 30px;
+        padding-left: 0;
         display: block;
         text-align: center;
     }
@@ -165,6 +172,15 @@
     }
 
     .footer__subscribe {
-        width: 100%;
+        width: 90%;
+    }
+
+    
+    .subscribe__input {
+        width: 200px;
+    }
+
+    .subscribe__button {
+        max-width: 200px;
     }
 }
