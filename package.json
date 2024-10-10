@@ -5,7 +5,7 @@
   "homepage": "https://yakov29.github.io/EnergyFlow/",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "parcel src/index.html",
+    "start": "parcel src/*.html",
     "db": "npx json-server db.json",
     "build": "parcel build src/index.html --public-url /EnergyFlow",
     "deploy": "gh-pages -d dist",
@@ -13,7 +13,7 @@
   },
   "keywords": [],
   "author": "",
-  "license": "ISC",
+  "license": "MIT",
   "dependencies": {
     "axios": "^1.7.5",
     "gh-pages": "^6.1.1",
