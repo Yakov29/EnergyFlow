@@ -17,7 +17,7 @@
     text-align: center;
     display: flex;
     margin: 0 auto;
-    margin-top: 357px;
+    margin-top: 100px;
     font-size: 1.2em;
     color: #333;
 }
@@ -123,10 +123,15 @@
 
 .card__button {
     background-image: url(../svg/trash.svg);
+    background-color: white;
     background-size: cover;
     background-repeat: no-repeat;
     border-radius: 0;
     width: 25px;
     height: 30px;
     padding: 0;
+}
+
+.card__button:hover{
+    background-color: white;
 }

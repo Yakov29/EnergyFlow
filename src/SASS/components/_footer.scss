@@ -48,9 +48,14 @@
     cursor: pointer;
 }
 
+.footer__close:hover{
+    background-color: #F6F6F6;
+}
+
 .footer__thank {
     display: block;
     text-align: center;
+    margin-top: 50px;
 }
 
 .footer__logo {

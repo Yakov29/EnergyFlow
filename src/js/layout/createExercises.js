@@ -1,5 +1,10 @@
 const exercisesList = document.querySelector('.exercises__List');
 const card__button = document.querySelector('.card__button');
+const alertBackdrop = document.querySelector(".alert__backdrop")
+const alertClose = document.querySelector(".alert__close")
+const alertTitle = document.querySelector(".alert__title")
+
+
 export const createExercisesList = (exerciseResults) => {
   exercisesList.innerHTML = '';
   console.log(exerciseResults.gifURL)
@@ -84,10 +89,14 @@ export const createExercisesList = (exerciseResults) => {
           favorites.push(favorite);
           
           localStorage.setItem("favorites", JSON.stringify(favorites));
-          
-          alert("Упражнение добавлено в избранное!");
+          exerciseBackdrop.classList.add('change__invisible');
+          alertBackdrop.classList.remove("change__invisible")
+          alertTitle.textContent = "This exercise has been added to favorites ✅ you can check it on the favorites page."
+         
         } else {
-          alert("Это упражнение уже в избранном!");
+          exerciseBackdrop.classList.add('change__invisible');
+          alertBackdrop.classList.remove("change__invisible")
+          alertTitle.textContent = "This exercise is already in your favorites or an error occurred ❌"
         }
       });
     });
@@ -98,3 +107,6 @@ export const createExercisesList = (exerciseResults) => {
   });
 };
 
+alertClose.addEventListener("click", () => {
+  alertBackdrop.classList.add("change__invisible")
+})

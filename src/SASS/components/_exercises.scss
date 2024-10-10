@@ -64,6 +64,10 @@ top: 0;
 background: none;
 }
 
+.exercises__close:hover{
+    background-color: #F6F6F6;
+}
+
 .exercises__content{
     margin-left: 40px;
 }
@@ -101,6 +105,13 @@ background: none;
 .give__raiting{
     background: none;
     border: 1px solid #333;
+}
+
+.give__raiting:hover{
+    background: none;
+    border: 1px solid #7E847F;
+    color: #7E847F;
+  
 }
 
 .exercises .container {
@@ -175,12 +186,58 @@ background: none;
     filter: brightness(0.7);
 }
 
+
+.alert__backdrop{
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #1B1B1B99;
+    z-index: 1;
+}
+
+.alert__modal{
+    width: 732px;
+    background-color: #F6F6F6;
+    display: flex;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 100px;
+    padding: 40px;
+    position: relative;
+    border-radius: 10px;
+}
+
+.alert__close{
+    position: absolute;
+right: 0;
+width: 60px;
+height: 60px;
+font-size: 30;
+top: 0;
+background: none;
+}
+
+.alert__close:hover{
+    background-color: #F6F6F6;
+}
+
+.alert__title{
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+}
+
 @media screen and (max-width: 1400px) {
+    .alert__modal{
+        width: 70%;
+    }
     .exercises__genre{
         justify-content: center;
     }
     .exercises__List {
-        grid-template-columns: repeat(3, 1fr);
+        grid-template-columns: repeat(2, 1fr);
     }
     .exercises__modal{
         width: 80%;

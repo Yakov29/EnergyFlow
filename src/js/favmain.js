@@ -1,17 +1,12 @@
 const favoritesList = document.querySelector(".favorites__list");
 const favorites = JSON.parse(localStorage.getItem('favorites')) || [];
 
-function createFavoriteItem(favorite) {
+function createFavoriteItem(favorite, index) {
     const listItem = document.createElement('li');
     listItem.classList.add('favorites__item');
     
     const card = document.createElement('div');
     card.classList.add('card__name');
-
-    // const deleteItem = document.createElement('button');
-    // deleteItem.classList.add('card__delete');
-    // deleteItem.textContent = 'Delete';
-    // card.appendChild(deleteItem);
 
     const button = document.createElement('button');
     button.classList.add('card__button');
@@ -61,18 +56,18 @@ function createFavoriteItem(favorite) {
     dataList.appendChild(targetItem);
 
     card.appendChild(dataList);
-
     listItem.appendChild(card);
 
-
-    button.addEventListener('click', (e) => {
-        console.log(e.target)
-        // localStorage.removeItem()
-    })
+    button.addEventListener('click', () => {
+        // Удаляем элемент из массива favorites
+        favorites.splice(index, 1);
+        // Обновляем localStorage
+        localStorage.setItem('favorites', JSON.stringify(favorites));
+        // Перерисовываем список
+        displayFavorites();
+    });
 
     return listItem;
-
-    
 }
 
 function displayFavorites() {
@@ -80,8 +75,8 @@ function displayFavorites() {
         favoritesList.innerHTML = `<p class="favorites__none">It appears that you haven't added any exercises to your favorites yet. To get started, you can add exercises that you like to your favorites for easier access in the future.</p>`;
     } else {
         favoritesList.innerHTML = "";
-        favorites.forEach(favorite => {
-            const favoriteItem = createFavoriteItem(favorite);
+        favorites.forEach((favorite, index) => {
+            const favoriteItem = createFavoriteItem(favorite, index);
             favoritesList.appendChild(favoriteItem);
         });
     }
